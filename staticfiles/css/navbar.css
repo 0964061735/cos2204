@@ -1,0 +1,59 @@
+.navbar {
+    background-color: #f89baa;
+    background-size: cover;
+    background-position: center;
+    color: rgb(11, 11, 11);
+    text-shadow: 1px 1px 1px rgb(5, 5, 5); /* เพิ่มเงาให้กับข้อความ */
+}
+
+.navbar-brand {
+    margin-right: 20px; /* เพิ่ม Margin เพื่อให้โลโก้ไม่ติดกับข้อความ */
+}
+
+/* ปรับสีข้อความลิงก์ใน Navbar */
+.navbar-nav .nav-link {
+    color: rgb(11, 11, 11);
+}
+
+/* ปรับสีข้อความลิงก์ใน Dropdown */
+.dropdown-menu .dropdown-item {
+    color: black; /* ปรับสีข้อความใน Dropdown เพื่อให้เหมาะสมกับพื้นหลัง */
+}
+
+/* ปรับสีขอบของ Dropdown */
+.dropdown-menu {
+    border-color: rgb(15, 14, 15); /* ปรับสีขอบของ Dropdown */
+    border-width: 1px; /* เพิ่มขอบให้หนาขึ้น */
+}
+
+
+/* ปรับสีขอบของปุ่มค้นหา */
+.form-inline .btn {
+    border-color: rgb(247, 156, 10); /* ปรับสีขอบของปุ่มเพื่อให้เหมาะสมกับพื้นหลัง */
+    border-width: 1px;
+}
+
+/* ปรับสีขอบของปุ่มตะกร้าสินค้า */
+.navbar-nav .nav-link.btn {
+    border-color: rgb(243, 240, 246); /* ปรับสีขอบของปุ่มเพื่อให้เหมาะสมกับพื้นหลัง */
+}
+
+/* ปรับสีขอบของปุ่มเข้าสู่ระบบ/ออกจากระบบ */
+.navbar-nav .nav-link.text-light.text-uppercase.font-weight-bold {
+    border-color: rgba(255, 0, 0, 0.904); /* ปรับสีขอบของปุ่มเพื่อให้เหมาะสมกับพื้นหลัง */
+}
+
+.navbar-nav .nav-link {
+    color: rgb(0, 0, 0); /* เปลี่ยนสีข้อความให้เป็นสีดำ */
+}
+
+body {
+    background-image: url('https://storage.googleapis.com/fastwork-static/47e1bf96-04d1-4173-8fbe-c3f7cf933d1e.jpg'); 
+    background-position: center; /* ให้รูปภาพวางตำแหน่งตรงกลาง */
+    color: rgb(0, 0, 0); /* ให้สีของข้อความเป็นสีขาว */
+    opacity: 100;
+}
+
+
+
+

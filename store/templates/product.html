@@ -1,0 +1,35 @@
+{% extends 'layouts.html' %}
+{% load humanize %}
+
+{% block content%}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-20">
+                <div class="card mt-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            {% if product.image %}
+                                <img class="card-img-top" src="{{ product.image.url }}" alt="">
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">{{product.name}}</h3>
+                                <h4 class="text-primary">฿{{product.price | intcomma}}</h4>
+                                <p class="card-text">{{product.description}}</p>
+                                {% if product.stock <= 0 %}
+                                    <h4 class="text-danger">สินค้าหมด</h4>
+                                {% else %}
+                                    <a class="btn btn-primary" onclick="return confirm('คุณต้องการเพิ่มสินค้าลงในตะกร้าหรือไม่ ?')"href="{% url 'addCart' product.id %}" class="btn btn-primary" id="addToCartBtn">เพิ่มลงตะกร้า</a>
+                                {% endif %}
+                                <a href="{% url 'home' %}" class="btn btn-secondary ">กลับไปยังหน้าหลัก</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock%}

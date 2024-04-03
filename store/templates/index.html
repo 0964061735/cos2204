@@ -1,0 +1,48 @@
+{% extends 'layouts.html' %}
+{% load humanize %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+      <div class="row my-5">
+      {% for product in products %}
+      <div class="col-lg-3 col-md-4 mb-5">
+          <div class="card h-100">
+            <div class="d-flex justify-content-center align-items-center" style="height: 200px;">
+              <a href="#"><img class="card-img-top" src="{{product.image.url}}" style="max-width: 100%; max-height: 100%;" alt=""></a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> <br>
+                  <a href="{{ product.get_url }}" style="text-decoration: none; font-size: 1rem;">{{ product.name }}</a>
+              </h5>            
+              <h5 style="font-size: 0.9rem;">฿{{product.price|intcomma}}</h5>
+              <p class="card-text" style="font-size: 0.8rem;"></p> 
+            </div>
+            <div class="card-footer">
+              {% if product.stock <= 0 %}
+                  <h4 class="text-danger" style="font-size: 1 rem;">สินค้าหมด</h4>
+              {% else %}
+                  <a href="{% url 'addCart' product.id %}" class="btn btn-primary" onclick="return confirm('คุณต้องการเพิ่มสินค้าลงในตะกร้าหรือไม่?')">เพิ่มลงตะกร้า</a>
+              {%endif%}
+          </div>
+          </div>
+        </div>
+      {% endfor %}
+      <nav aria-label="navigation">
+        {% if products.paginator.num_pages > 1 %}
+        <ul class="pagination">
+          {% for page_number in products.paginator.page_range %}
+            <li class="page-item 
+            {% if products.number == page_number %}
+                active
+            {% endif %}
+            "><a class="page-link" href="?page={{page_number}}" style="font-size: 0.9rem;">{{page_number}}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </nav>
+  </div>
+
+
+
+{% endblock %}

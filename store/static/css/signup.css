@@ -1,0 +1,56 @@
+
+/* การจัดหน้าเพจ */
+.container {
+    margin-top: 100px;
+}
+
+.card {
+    background-color: #f6b282; /* สีพื้นหลัง*/
+    border-radius: 20px; /* ขอบมน */
+}
+
+/* สไตล์ส่วนหัวของบัตร */
+.card-header {
+    background-color: #1a80e6; /* สีพื้นหลังส่วนหัว */
+    border-bottom: 1px solid #dee2e6; /* เส้นขอบด้านล่าง */
+}
+
+/* ขนาดและการจัดตำแหน่งของหัวข้อบัตร */
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* การจัดรูปแบบของกลุ่มฟอร์ม */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* ข้อความของกลุ่มฟอร์ม */
+.form-group p {
+    font-weight: bold;
+}
+
+/* รูปแบบของอินพุตฟอร์ม */
+.form-control {
+    border-radius: 5px; /* ขอบมน */
+}
+
+/* ปุ่มขนาดเต็ม */
+.btn-block {
+    border-radius: 5px; /* ขอบมน */
+    font-weight: bold; /* ตัวหนังสือหนา */
+}
+
+/* ปุ่มสีเขียว */
+.btn-success {
+    background-color: #28a745; /* สีเขียว */
+    color: #100000; /* สีข้อความ */
+}
+
+/* การโฮเวอร์ปุ่มสีเขียว */
+.btn-success:hover {
+    background-color: #218838; /* เมื่อนำเมาส์มาวางบนปุ่ม */
+}
